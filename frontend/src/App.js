@@ -10,7 +10,7 @@ import './App.css';
 // Home, Topics, Gallery, Contact, and Staff Pages 
 
 
-import PiecesPage from './pages/PiecesPage';
+import ClosetPage from './pages/ClosetPage';
 
 // For Create and Edit, use the form OR table design; not both.
 // If your schema requires LONG data input, then use the FORM design:
@@ -42,7 +42,7 @@ function App() {
                 <Routes> 
                     {/* Add Routes for Home, Topics, Gallery, Contact, and Staff Pages.  */}
                     
-                    <Route path="/" element={<PiecesPage setPiece={setPieceToEdit}/>} />
+                    <Route path="/" element={<ClosetPage setPiece={setPieceToEdit}/>} />
                  
                     {/* Use these if your schema requires LONG data input: */}
                     <Route path="/create" element={<AddPiecePageTable />} /> 

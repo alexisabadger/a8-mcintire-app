@@ -1,14 +1,17 @@
 import { React, useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
+// import components
 import PieceList from '../components/PieceList';
-import { Link } from 'react-router-dom';
+// ICONS import { FaRunning } from 'react-icons/fa';
 
-function PiecesPage({ setPiece }) {
-    // Use the Navigate for redirection
+
+function ClosetPage({ setPiece }) {
+
+    // use Navigate for redirection
     const redirect = useNavigate();
 
-    // Use state to bring in the data
+    // use state to bring in the data
     const [pieces, setPieces] = useState([]);
 
     // RETRIEVE the entire list of Pieces
@@ -58,4 +61,4 @@ function PiecesPage({ setPiece }) {
     );
 }
 
-export default PiecesPage;
+export default ClosetPage;
