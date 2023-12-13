@@ -7,15 +7,19 @@ import Navigation from './components/Navigation';
 import './App.css';
 
 // Import pages you have completed:
-// Home, Topics, Gallery, Contact, and Staff Pages 
 
-
+import HomePage from './pages/HomePage';
 import ClosetPage from './pages/ClosetPage';
+import GalleryPage from './pages/GalleryPage';
+import TopicsPage from './pages/TopicsPage';
+import OrderPage from './pages/OrderPage';
+import ContactPage from './pages/ContactPage';
+
 
 // For Create and Edit, use the form OR table design; not both.
 // If your schema requires LONG data input, then use the FORM design:
-import AddPiecePageForm from './pages/AddPiecePageForm';
-import EditPiecePageForm from './pages/EditPiecePageForm';
+// import AddPiecePageForm from './pages/optional/AddPiecePageForm';
+// import EditPiecePageForm from './pages/optional/EditPiecePageForm';
 
 // If your schema requires SHORT data input, then use the TABLE design.
 import EditPiecePageTable from './pages/EditPiecePageTable';
@@ -30,9 +34,10 @@ function App() {
     <>
       <BrowserRouter>
 
-          <header>
-            <h1>Portfolio</h1>
-            <p>Describe this website.</p>
+          <header className='App-header'>
+            <h1>E.A.</h1>
+              <i><img src="./android-chrome-192x192.png" className="App-logo" alt="logo" /></i>
+            <h1>McIntire</h1>
           </header>
 
           <Navigation />
@@ -42,15 +47,18 @@ function App() {
                 <Routes> 
                     {/* Add Routes for Home, Topics, Gallery, Contact, and Staff Pages.  */}
                     
-                    <Route path="/" element={<ClosetPage setPiece={setPieceToEdit}/>} />
-                 
+                    <Route path="/" element={<HomePage/>} />
+                    <Route path="/closet" element={<ClosetPage setPiece={setPieceToEdit}/>} />
+                    <Route path="/topics" element={<TopicsPage />} />
+
+                    <Route path="/gallery" element={<GalleryPage />} />
+                    <Route path="/order" element={<OrderPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+
                     {/* Use these if your schema requires LONG data input: */}
                     <Route path="/create" element={<AddPiecePageTable />} /> 
                     <Route path="/update" element={<EditPiecePageTable pieceToEdit={piece} />} />
 
-                    {/* Or these if your schema requires SHORT data input: */}
-                     <Route path="/create" element={<AddPiecePageForm />} />   
-                     <Route path="/update" element={<EditPiecePageForm pieceToEdit={piece} />} />
                 </Routes>
               </section>
           </main>

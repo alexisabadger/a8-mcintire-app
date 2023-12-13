@@ -1,24 +1,18 @@
 import React from 'react';
-import Piece from './Piece';
+import Piece from './PieceRow';
+import TableHead from './TableHead';
 
 // Change the function names and parameters 
 // to fit your portfolio topic and schema.
 
-function PieceList({ pieces, onDelete, onEdit }) {
+function PieceTable({ pieces, onDelete, onEdit }) {
     return (
-        <table id="pieces">
-            <caption>Add and Edit Pieces</caption>
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Year</th>
-                    <th>Language</th>
-                    <th>Delete</th>
-                    <th>Edit</th>
-                </tr>
-            </thead>
+        <table id="closetTable">
+            <caption>List of pieces in your closet...</caption>
+            <TableHead />
             <tbody>
                 {pieces.map((piece, i) => 
+                    // Piece(Row) is a component that displays a single piece
                     <Piece 
                         piece={piece} 
                         key={i}
@@ -26,8 +20,11 @@ function PieceList({ pieces, onDelete, onEdit }) {
                         onEdit={onEdit} 
                     />)}
             </tbody>
+            <tfoot>
+
+            </tfoot>
         </table>
     );
 }
 
-export default PieceList;
+export default PieceTable;

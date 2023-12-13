@@ -2,7 +2,7 @@ import { React, useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
 // import components
-import PieceList from '../components/PieceList';
+import PieceTable from '../components/PieceTable';
 // ICONS import { FaRunning } from 'react-icons/fa';
 
 
@@ -52,7 +52,7 @@ function ClosetPage({ setPiece }) {
             <h2>List of Pieces</h2>
             <p>Paragraph about this page.</p>
             <Link to="/create">Add Piece</Link>
-            <PieceList 
+            <PieceTable 
                 pieces={pieces} 
                 onEdit={onEditPiece} 
                 onDelete={onDeletePiece} 

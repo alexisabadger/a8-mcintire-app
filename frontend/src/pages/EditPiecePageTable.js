@@ -30,7 +30,7 @@ export const EditPiecePageTable = ({ pieceToEdit }) => {
             const errMessage = await response.json();
             alert(`helpful editing message ${response.status}. ${errMessage.Error}`);
         }
-        redirect("/");
+        redirect("/closet");
     }
 
     return (
