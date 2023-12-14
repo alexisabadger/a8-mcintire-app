@@ -14,16 +14,18 @@ import GalleryPage from './pages/GalleryPage';
 import TopicsPage from './pages/TopicsPage';
 import OrderPage from './pages/OrderPage';
 import ContactPage from './pages/ContactPage';
+import SubmitPage from './pages/SubmitPage';
 
 
 // For Create and Edit, use the form OR table design; not both.
 // If your schema requires LONG data input, then use the FORM design:
-// import AddPiecePageForm from './pages/optional/AddPiecePageForm';
-// import EditPiecePageForm from './pages/optional/EditPiecePageForm';
+import AddPiecePageForm from './pages/AddPiecePageForm';
+import EditPiecePageForm from './pages/EditPiecePageForm';
 
 // If your schema requires SHORT data input, then use the TABLE design.
-import EditPiecePageTable from './pages/EditPiecePageTable';
-import AddPiecePageTable from './pages/AddPiecePageTable';
+// import EditPiecePageTable from './pages/EditPiecePageTable';
+// import AddPiecePageTable from './pages/AddPiecePageTable';
+
 
 // Define the function that renders the content in Routes, using State.
 function App() {
@@ -61,8 +63,10 @@ function App() {
                     <Route path="/contact" element={<ContactPage />} />
 
                     {/* Use these if your schema requires LONG data input: */}
-                    <Route path="/create" element={<AddPiecePageTable />} /> 
-                    <Route path="/update" element={<EditPiecePageTable pieceToEdit={piece} />} />
+                    <Route path="/create" element={<AddPiecePageForm />} /> 
+                    <Route path="/update" element={<EditPiecePageForm pieceToEdit={piece} />} />
+
+                    <Route path="/submit" element={<SubmitPage />} />
 
                 </Routes>
 

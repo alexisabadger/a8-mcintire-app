@@ -1,5 +1,4 @@
 import React from "react";
-import { HiHome } from "react-icons/hi2";
 
 
 function HomePage() {
@@ -11,24 +10,30 @@ function HomePage() {
             <main className="App-main" id="index">
                 <section>
                     <article id="">
-                        <h3>Home Page</h3>
+                        <h2>Hey there!</h2>
                         <p>
-                            This is an article about my career goals.
+                            Welcome to my portfolio site. I'm Elizabeth Alexandra, a full-stack software engineer intern
+                            at a small software company in the Mountain West. I'm also a student at Oregon
+                            State University, where I'm pursuing a Bachelor of Science in Computer Science.
                         </p>
                     </article>
                     <article id="">
-                        <h3>About this app</h3>
+                        <h3>About This Site</h3>
                         <p>
-                            This website incorporates all of the following technologies, which
-                            are explained briefly here and demonstrated in each of the pages.
+                            This website incorporates some of the web technologies I've worked with so far,
+                            namely:
                         </p>
 
                         <dl>
                             <dt><strong>HTML</strong></dt>    
-                            <dd>HyperText Markup Language, the standard markup language for documents designed to be displayed in a web browser.
+                            <dd>also known as HyperText Markup Language, HTML is the standard markup 
+                                language for documents displayed in a web browser. The latest version
+                                of this standard is HTML5.
                             </dd>
                             <dt><strong>CSS</strong></dt>
-                            <dd>at enabling users to accomplish their mission with a minimum amount of time and frustration?
+                            <dd>allows developers to edit a site's presentation layer to give the site 
+                                a consistent look and feel. Additionally, developers are able to modify 
+                                these style rules without altering the site's content.
                             </dd>
                             <dt><strong>JavaScript</strong></dt>
                             <dd>for both first-time and returning users? 
@@ -51,8 +56,9 @@ function HomePage() {
                             </dd>
                         </dl>
 
-                        <p>
-                            Maybe one final paragraph here, to wrap up the page?
+                        <p id="homepageLastParagraph">
+                            I look forward to adding more technologies to this list 
+                            as I continue to learn and grow as a developer.
                         </p>
                     </article>
 

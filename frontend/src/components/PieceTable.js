@@ -7,7 +7,7 @@ import TableHead from './TableHead';
 
 function PieceTable({ pieces, onDelete, onEdit }) {
     return (
-        <table id="closetTable">
+        <table id="productTable">
             <caption>List of pieces in your closet...</caption>
             <TableHead />
             <tbody>

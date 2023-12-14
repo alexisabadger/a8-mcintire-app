@@ -52,7 +52,7 @@ function ClosetPage({ setPiece }) {
             <main className="App-main" id="index">
                 <section>
                     <article id="">
-                        <h3>List of Pieces</h3>
+                        <h2>List of Pieces</h2>
                         <p>
                             This website incorporates all of the following technologies, which
                             are explained briefly here and demonstrated in each of the pages.

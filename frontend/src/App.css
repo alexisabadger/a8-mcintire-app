@@ -23,12 +23,12 @@ Consistant design for each page layout block.
 /* NAVIGATION
 Simple changes to make anchors look like buttons. 
 */
-nav {}
+/* nav {}
 nav a {margin-right:3%;}
 nav a:hover {}
 
 /* TABLE */
-table {}
+/* table {}
 caption {}
 tr td, td th {border-bottom:1px dotted whitesmoke;}
 tr:nth-child(even){}
@@ -36,12 +36,12 @@ th {}
 
 
 /* FORM */
-fieldset {}
+/* fieldset {}
 legend {}
 label {display:block;margin-top:3%;}
 input {}
 button {}
-button:hover {}
+button:hover {} */ 
 
 
 

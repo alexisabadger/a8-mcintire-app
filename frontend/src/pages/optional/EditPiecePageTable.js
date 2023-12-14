@@ -33,13 +33,20 @@ export const EditPiecePageTable = ({ pieceToEdit }) => {
         redirect("/closet");
     }
 
+
+    //productTable
+
     return (
         <>
+        <main id="index">
+        <section>
         <article>
             <h2>Edit a piece</h2>
-            <p>Paragraph about this page.</p>
-            <table id="pieces">
-                <caption>Which Piece are you adding?</caption>
+            <p>On this page, you can edit the brand, quantity, category,
+                color, and date purchased of all of the piece of clothing (and shoes)
+                in your closet.</p>
+            <table id="productTable">
+                <caption>Which piece would you like to edit?</caption>
                 <thead>
                     <tr>
                         <th>brand</th>
@@ -108,6 +115,8 @@ export const EditPiecePageTable = ({ pieceToEdit }) => {
                 </tbody>
             </table>
             </article>
+            </section>
+            </main>
         </>
     );
 }

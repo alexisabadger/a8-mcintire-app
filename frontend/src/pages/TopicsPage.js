@@ -1,5 +1,4 @@
-
-import Menu from '../components/Navigation';
+import React from "react";
 
 function TopicsPage() {
 
