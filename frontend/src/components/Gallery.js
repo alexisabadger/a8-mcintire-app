@@ -23,10 +23,6 @@ const Gallery = ({ images }) => {
             <img src={images[currentImage].url} alt={images[currentImage].alt} />
         </figure>
 
-        <div className="image-container">
-            <p className="caption">{images[currentImage].caption}</p>
-            <img src={images[currentImage].url} alt={images[currentImage].caption} />
-        </div>
     </div>
   );
 };
