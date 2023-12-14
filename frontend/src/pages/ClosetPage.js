@@ -37,7 +37,7 @@ function ClosetPage({ setPiece }) {
             const pieces = await getResponse.json();
             setPieces(pieces);
         } else {
-            console.error(`helpful deletion message = ${_id}, status code = ${response.status}`)
+            console.error(`Oh no, there was an error! = ${_id}, status code = ${response.status}`)
         }
     }
 
@@ -52,10 +52,11 @@ function ClosetPage({ setPiece }) {
             <main className="App-main" id="index">
                 <section>
                     <article id="">
-                        <h2>List of Pieces</h2>
+                        <h2>The Closet Database</h2>
                         <p>
-                            This website incorporates all of the following technologies, which
-                            are explained briefly here and demonstrated in each of the pages.
+                            Welcome to the Closet Database. Clothes, shoes, and
+                            other pieces of clothing - store them here. With ClosetDB,
+                            you can add a piece, edit a piece, or delete a piece from the closet.
                         </p>
                         <Link to="/create">Add Piece</Link>
                         <PieceTable 

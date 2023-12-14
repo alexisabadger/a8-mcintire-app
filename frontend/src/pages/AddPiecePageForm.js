@@ -6,72 +6,93 @@ import { useNavigate } from "react-router-dom";
 
 export const AddMoviePageForm = () => {
 
-    const [title, setTitle]       = useState('');
-    const [year, setYear]         = useState('');
-    const [language, setLanguage] = useState('');
+    const [brand, setBrand]       = useState('');
+    const [quantity, setQuantity]         = useState('');
+    const [color, setColor] = useState('');
+    const [category, setCategory] = useState('');
+    const [datePurchased, setDatePurchased] = useState('');
+    
     
     const redirect = useNavigate();
 
-    const addMovie = async () => {
-        const newMovie = { title, year, language };
-        const response = await fetch('/movies', {
+    const addPiece = async () => {
+        const newPiece = { brand, color, category, quantity, datePurchased };
+        const response = await fetch('/piece', {
             method: 'post',
-            body: JSON.stringify(newMovie),
+            body: JSON.stringify(newPiece),
             headers: {
                 'Content-Type': 'application/json',
             },
         });
         if(response.status === 201){
-            alert(`helpful adding message`);
-            redirect("/");
+            alert(`A ${newPiece.color} ${newPiece.brand} ${newPiece.category} was added to the closet.`);
         } else {
-            alert(`helpful adding message = ${response.status}`);
-            redirect("/");
+            alert(`Oh no, there was an error! = ${response.status}`);
         }
+        redirect("/closet");
     };
+
+
 
 
     return (
         <>
+        <main id="index">
+        <section>
         <article>
-            <h2>Add a movie</h2>
-            <p>Paragraph about this page.</p>
+            <h2>Add a piece</h2>
+            <p>Got a new pair of shoes, a sweater, or other piece of clothing?
+                Great; add it to the closet here.
+            </p>
             <form onSubmit={(e) => { e.preventDefault();}}>
                 <fieldset>
-                    <legend>Which movie are you adding?</legend>
-                    <label for="title">Movie title</label>
+                    <legend>Which piece are you adding?</legend>
+                    <label for="brand">Brand of the piece</label>
                     <input
                         type="text"
-                        placeholder="Title of the movie"
-                        value={title}
-                        onChange={e => setTitle(e.target.value)} 
-                        id="title" />
+                        value={brand}
+                        onChange={e => setBrand(e.target.value)} 
+                        id="brand" />
                     
-                    <label for="year">Year released</label>
+                    <label for="quantity">Quantity of the piece</label>
                     <input
                         type="number"
-                        value={year}
-                        placeholder="Year of the movie"
-                        onChange={e => setYear(e.target.value)} 
-                        id="year" />
+                        value={quantity}
+                        onChange={e => setQuantity(e.target.value)} 
+                        id="quantity" />
 
-                    <label for="language">Language</label>
+                    <label for="category">Category of the piece</label>
                     <input
                         type="text"
-                        placeholder="Primary language of the movie"
-                        value={language}
-                        onChange={e => setLanguage(e.target.value)} 
-                        id="language" />
+                        value={category}
+                        onChange={e => setCategory(e.target.value)} 
+                        id="category" />
+
+                    <label for="color">Color of the piece</label>
+                    <input
+                        type="text"
+                        value={color}
+                        onChange={e => setColor(e.target.value)} 
+                        id="color" />
+
+                    <label for="datePurchased">Date purchased</label>
+                    <input
+                        type="date"
+                        value={datePurchased}
+                        onChange={e => setDatePurchased(e.target.value)} 
+                        id="datePurchased" />
 
                     <label for="submit">
                     <button
                         type="submit"
-                        onClick={addMovie}
+                        onClick={addPiece}
                         id="submit"
-                    >Add</button> to the collection</label>
+                    >Add</button> the piece to the closet</label>
                 </fieldset>
                 </form>
             </article>
+            </section>
+            </main>
         </>
     );
 }

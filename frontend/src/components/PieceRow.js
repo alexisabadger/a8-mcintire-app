@@ -4,7 +4,8 @@ import React from 'react';
 // Change the icons, function names, and parameters 
 // to fit your portfolio topic and schema.
 
-import { MdDeleteForever, MdEdit } from 'react-icons/md';
+import { TbTrashX } from "react-icons/tb";
+import { TbPencil } from "react-icons/tb";
 
 
 function Piece({ piece, onEdit, onDelete }) {
@@ -24,8 +25,8 @@ function Piece({ piece, onEdit, onDelete }) {
 
 
             {/* Update these icons to something that matches your style. */}
-            <td><MdDeleteForever onClick={() => onDelete(piece._id)} /></td>
-            <td><MdEdit onClick={() => onEdit(piece)} /></td>
+            <td><TbPencil onClick={() => onEdit(piece)} /></td>
+            <td><TbTrashX onClick={() => onDelete(piece._id)} /></td>
         </tr>
     );
 }

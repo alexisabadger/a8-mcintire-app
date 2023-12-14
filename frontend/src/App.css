@@ -471,6 +471,24 @@ object {}
 
 @keyframes App-logo {}
 
+/*   ===== TABLE - ensure it responds well to small screens ===== */
+@media all and (max-width: 1040px) {
+  /* table#productTable {
+    overflow-x: auto;
+    display: block;
+  } */
+
+  table#productTable td:nth-child(4),
+  table#productTable td:nth-child(5) {
+    display: none;
+  }
+
+  th:nth-child(4),
+  th:nth-child(5) {
+    display: none;
+  }
+}
+
 /*   ===== TABLET  media query overrides mobile styles ===== */
 @media all and (min-width: 600px) {
     body {

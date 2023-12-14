@@ -3,7 +3,6 @@ import React from "react";
 
 function HomePage() {
 
-    console.log("HomePage");
 
     return (
         <>
@@ -36,23 +35,36 @@ function HomePage() {
                                 these style rules without altering the site's content.
                             </dd>
                             <dt><strong>JavaScript</strong></dt>
-                            <dd>for both first-time and returning users? 
+                            <dd>is multifaceted language with two main programming paradigms: 
+                                object-oriented programming and functional programming. Additionally,
+                                JavaScript is a both a client-side language (it runs in the browser) 
+                                and a server-side language (which can be used to write web servers in Express).
                             </dd>
                             <dt><strong>Node</strong></dt>
-                            <dd>from both a technical and goal-oriented perspective? What happens to users when they run into errors,
-                                and can these errors be recovered from?
+                            <dd>is a JavaScript runtime environment. Node allows developers to
+                                write JavaScript code that runs outside of the browser, such as on the backend
+                                of a web application/website (like this website, in fact).
                             </dd>
                             <dt><strong>Express</strong></dt>
-                            <dd>enjoyable, and appropriate for its intended audience?
+                            <dd>is a web application framework for Node. It was designed to help developers
+                                build web applications and APIs. Express is the backend framework used for this website.
                             </dd>
                             <dt><strong>Asynchronous Programming</strong></dt>
-                            <dd>enjoyable, and appropriate for its intended audience?
+                            <dd>according to Mozilla documentation, "Asynchronous programming is a technique 
+                                that enables your program to start a potentially long-running 
+                                task and still be able to be responsive to other events while that task runs, 
+                                rather than having to wait until that task has finished. Once that 
+                                task has finished, your program is presented with the result." Asynchronous
+                                programming is a key benefit of JavaScript.
                             </dd>
                             <dt><strong>React</strong></dt>
-                            <dd>enjoyable, and appropriate for its intended audience?
+                            <dd>is a JavaScript library for building user interfaces. React, though 
+                                first developed by Facebook, is an open-source project. React was used
+                                to build the frontend of this website.
                             </dd>
                             <dt><strong>MongoDB</strong></dt>
-                            <dd>enjoyable, and appropriate for its intended audience?
+                            <dd>is a NoSQL (document-oriented database). MongoDB stores data in JSON-like documents
+                                (vs. tables in a relational database, like SQL). MongoDB is the database used for this website.
                             </dd>
                         </dl>
 

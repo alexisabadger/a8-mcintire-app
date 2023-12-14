@@ -12,7 +12,6 @@ import HomePage from './pages/HomePage';
 import ClosetPage from './pages/ClosetPage';
 import GalleryPage from './pages/GalleryPage';
 import TopicsPage from './pages/TopicsPage';
-import OrderPage from './pages/OrderPage';
 import ContactPage from './pages/ContactPage';
 import SubmitPage from './pages/SubmitPage';
 
@@ -59,7 +58,6 @@ function App() {
                     <Route path="/topics" element={<TopicsPage />} />
 
                     <Route path="/gallery" element={<GalleryPage />} />
-                    <Route path="/order" element={<OrderPage />} />
                     <Route path="/contact" element={<ContactPage />} />
 
                     {/* Use these if your schema requires LONG data input: */}

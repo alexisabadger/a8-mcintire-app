@@ -1,72 +1,96 @@
 import React, { useState }  from 'react';
 import { useNavigate } from "react-router-dom";
 
-export const EditMoviePageForm = ({ movieToEdit }) => {
+export const EditPiecePageForm = ({ pieceToEdit }) => {
  
-    const [title, setTitle]       = useState(movieToEdit.title);
-    const [year, setYear]         = useState(movieToEdit.year);
-    const [language, setLanguage] = useState(movieToEdit.language);
+    const [brand, setBrand]       = useState(pieceToEdit.brand);
+    const [quantity, setQuantity]         = useState(pieceToEdit.quantity);
+    const [category, setCategory] = useState(pieceToEdit.category);
+    const [color, setColor] = useState(pieceToEdit.color);
+    const [datePurchased, setDatePurchased] = useState(pieceToEdit.datePurchased);
     
     const redirect = useNavigate();
 
-    const editMovie = async () => {
-        const response = await fetch(`/movies/${movieToEdit._id}`, {
+    const editPiece = async () => {
+        const response = await fetch(`/piece/${pieceToEdit._id}`, {
             method: 'PUT',
             body: JSON.stringify({ 
-                title: title, 
-                year: year, 
-                language: language
+                brand: brand, 
+                quantity: quantity, 
+                category: category,
+                color: color,
+                datePurchased: datePurchased
             }),
             headers: {'Content-Type': 'application/json',},
         });
 
         if (response.status === 200) {
-            alert(`helpful editing message`);
+            alert(`A ${category} was edited successfully.`);
         } else {
             const errMessage = await response.json();
-            alert(`helpful editing message ${response.status}. ${errMessage.Error}`);
+            alert(`Oh no, there was an error! ${response.status}. ${errMessage.Error}`);
         }
         redirect("/closet");
     }
 
     return (
         <>
+        <main id="index">
+        <section>
         <article>
-            <h2>Edit a movie</h2>
-            <p>Paragraph about this page.</p>
+            <h2>Edit a piece</h2>
+            <p>Sometimes, we donate, sell, or lose a piece of clothing.
+                If that happens, you can edit the piece here.
+            </p>
             <form onSubmit={(e) => { e.preventDefault();}}>
                 <fieldset>
-                    <legend>Which movie are you adding?</legend>
-                    <label for="title">Movie title</label>
+                    <legend>Which piece are you editing?</legend>
+                    <label for="brand">Brand of the piece</label>
                     <input
                         type="text"
-                        value={title}
-                        onChange={e => setTitle(e.target.value)} 
-                        id="title" />
+                        value={brand}
+                        onChange={e => setBrand(e.target.value)} 
+                        id="brand" />
                     
-                    <label for="year">Year released</label>
+                    <label for="quantity">Quantity of the piece</label>
                     <input
                         type="number"
-                        value={year}
-                        onChange={e => setYear(e.target.value)} 
-                        id="year" />
+                        value={quantity}
+                        onChange={e => setQuantity(e.target.value)} 
+                        id="quantity" />
 
-                    <label for="language">Language</label>
+                    <label for="category">Category of the piece</label>
                     <input
                         type="text"
-                        value={language}
-                        onChange={e => setLanguage(e.target.value)} 
-                        id="language" />
+                        value={category}
+                        onChange={e => setCategory(e.target.value)} 
+                        id="category" />
+
+                    <label for="color">Color of the piece</label>
+                    <input
+                        type="text"
+                        value={color}
+                        onChange={e => setColor(e.target.value)} 
+                        id="color" />
+
+                    <label for="datePurchased">Date purchased</label>
+                    <input
+                        type="date"
+                        value={datePurchased}
+                        onChange={e => setDatePurchased(e.target.value)} 
+                        id="datePurchased" />
 
                     <label for="submit">
                     <button
-                        onClick={editMovie}
+                        onClick={editPiece}
                         id="submit"
-                    >Save</button> updates to the collection</label>
+                    >Save</button> updates to the closet</label>
                 </fieldset>
                 </form>
             </article>
+        </section>
+        </main>
         </>
     );
 }
-export default EditMoviePageForm;
+export default EditPiecePageForm;

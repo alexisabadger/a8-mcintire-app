@@ -25,10 +25,10 @@ export const EditPiecePageTable = ({ pieceToEdit }) => {
         });
 
         if (response.status === 200) {
-            alert(`helpful editing message`);
+            alert(`A ${category} was edited successfully.`);
         } else {
             const errMessage = await response.json();
-            alert(`helpful editing message ${response.status}. ${errMessage.Error}`);
+            alert(`Oh no, there was an error! ${response.status}. ${errMessage.Error}`);
         }
         redirect("/closet");
     }

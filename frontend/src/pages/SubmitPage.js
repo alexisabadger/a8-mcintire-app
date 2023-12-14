@@ -13,10 +13,8 @@ function SubmitPage() {
         <section>
             <h2>Contact</h2>
             <article>
-                <p>Thank you for your message!</p>
-                <p>Name: {formData.name}</p>
-                <p>Email: {formData.email}</p>
-                <p>Subject: {formData.subject}</p>
+                <p>Thank you for your message, {formData.name}!</p>
+                <p>We will reply to you soon...</p>
             </article>
         </section>
     </main>

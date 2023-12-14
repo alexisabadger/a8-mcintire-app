@@ -18,7 +18,6 @@ function Menu() {
         <NavLink to="/topics"><i><VscBook /></i>Topics</NavLink>
         
         <NavLink to="/gallery">Gallery</NavLink>
-        <NavLink to="/order">Order</NavLink>
         <NavLink to="/contact">Contact</NavLink>
 
     </nav>

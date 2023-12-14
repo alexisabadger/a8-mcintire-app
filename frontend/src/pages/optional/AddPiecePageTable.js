@@ -25,9 +25,9 @@ export const AddPiecePageTable = () => {
             },
         });
         if(response.status === 201){
-            alert(`helpful adding message`);
+            alert(`A ${newPiece.color} ${newPiece.brand} ${newPiece.category} was added to the closet.`);
         } else {
-            alert(`helpful adding message = ${response.status}`);
+            alert(`Oh no, there was an error! ${response.status}`);
         }
         redirect("/");
     };

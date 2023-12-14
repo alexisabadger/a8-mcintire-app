@@ -8,7 +8,7 @@ import TableHead from './TableHead';
 function PieceTable({ pieces, onDelete, onEdit }) {
     return (
         <table id="productTable">
-            <caption>List of pieces in your closet...</caption>
+            <caption>List of pieces in the closet...</caption>
             <TableHead />
             <tbody>
                 {pieces.map((piece, i) => 
@@ -16,8 +16,8 @@ function PieceTable({ pieces, onDelete, onEdit }) {
                     <Piece 
                         piece={piece} 
                         key={i}
-                        onDelete={onDelete}
-                        onEdit={onEdit} 
+                        onEdit={onEdit}
+                        onDelete={onDelete} 
                     />)}
             </tbody>
             <tfoot>
