@@ -34,16 +34,21 @@ function App() {
     <>
       <BrowserRouter>
 
-          <header className='App-header'>
-            <h1>E.A.</h1>
-              <i><img src="./android-chrome-192x192.png" className="App-logo" alt="logo" /></i>
-            <h1>McIntire</h1>
+        <body>
+
+          <header className='App-header' id="grid-child-header">
+
+            <h1>
+                <span>E. Alex </span>
+                <a href="./index.html" >
+                    <img id="headerImg" src="./android-chrome-192x192.png" className="App-logo" alt="logo" />
+                </a>
+                <span> McIntire</span>
+            </h1>
           </header>
 
-          <Navigation />
+          <Navigation id="grid-child-global-nav" />
 
-          <main>
-            <section>
                 <Routes> 
                     {/* Add Routes for Home, Topics, Gallery, Contact, and Staff Pages.  */}
                     
@@ -60,11 +65,12 @@ function App() {
                     <Route path="/update" element={<EditPiecePageTable pieceToEdit={piece} />} />
 
                 </Routes>
-              </section>
-          </main>
+
+
+        </body>
 
           <footer>
-            <p>Copyright statement</p>
+            <p>© 2023 E. Alex McIntire</p>
           </footer>
 
       </BrowserRouter>

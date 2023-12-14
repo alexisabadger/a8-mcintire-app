@@ -49,14 +49,23 @@ function ClosetPage({ setPiece }) {
     // DISPLAY the pieces
     return (
         <>
-            <h2>List of Pieces</h2>
-            <p>Paragraph about this page.</p>
-            <Link to="/create">Add Piece</Link>
-            <PieceTable 
-                pieces={pieces} 
-                onEdit={onEditPiece} 
-                onDelete={onDeletePiece} 
-            />
+            <main className="App-main" id="index">
+                <section>
+                    <article id="">
+                        <h3>List of Pieces</h3>
+                        <p>
+                            This website incorporates all of the following technologies, which
+                            are explained briefly here and demonstrated in each of the pages.
+                        </p>
+                        <Link to="/create">Add Piece</Link>
+                        <PieceTable 
+                            pieces={pieces} 
+                            onEdit={onEditPiece} 
+                            onDelete={onDeletePiece} 
+                        />
+                    </article>
+                </section>
+            </main>
         </>
     );
 }

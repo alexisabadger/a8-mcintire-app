@@ -8,13 +8,56 @@ function HomePage() {
 
     return (
         <>
-            <h2><i><HiHome /></i>Welcome to my Web Dev Portfolio</h2>
+            <main className="App-main" id="index">
+                <section>
+                    <article id="">
+                        <h3>Home Page</h3>
+                        <p>
+                            This is an article about my career goals.
+                        </p>
+                    </article>
+                    <article id="">
+                        <h3>About this app</h3>
+                        <p>
+                            This website incorporates all of the following technologies, which
+                            are explained briefly here and demonstrated in each of the pages.
+                        </p>
 
-            <article id="homeArticle">
-                <h3>About this app</h3>
+                        <dl>
+                            <dt><strong>HTML</strong></dt>    
+                            <dd>HyperText Markup Language, the standard markup language for documents designed to be displayed in a web browser.
+                            </dd>
+                            <dt><strong>CSS</strong></dt>
+                            <dd>at enabling users to accomplish their mission with a minimum amount of time and frustration?
+                            </dd>
+                            <dt><strong>JavaScript</strong></dt>
+                            <dd>for both first-time and returning users? 
+                            </dd>
+                            <dt><strong>Node</strong></dt>
+                            <dd>from both a technical and goal-oriented perspective? What happens to users when they run into errors,
+                                and can these errors be recovered from?
+                            </dd>
+                            <dt><strong>Express</strong></dt>
+                            <dd>enjoyable, and appropriate for its intended audience?
+                            </dd>
+                            <dt><strong>Asynchronous Programming</strong></dt>
+                            <dd>enjoyable, and appropriate for its intended audience?
+                            </dd>
+                            <dt><strong>React</strong></dt>
+                            <dd>enjoyable, and appropriate for its intended audience?
+                            </dd>
+                            <dt><strong>MongoDB</strong></dt>
+                            <dd>enjoyable, and appropriate for its intended audience?
+                            </dd>
+                        </dl>
 
-                <p>Explain all the technologies used in the site.</p>
-            </article>
+                        <p>
+                            Maybe one final paragraph here, to wrap up the page?
+                        </p>
+                    </article>
+
+                </section>
+            </main>
         </>
     );
 }

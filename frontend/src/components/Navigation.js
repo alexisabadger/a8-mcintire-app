@@ -10,12 +10,12 @@ import { VscBook } from "react-icons/vsc";
 
 function Menu() {
   return (
-    <nav className="App-nav">
+    <nav className="global">
 
         {/* Add links to Home, Topics, Gallery, Contact, and Staff Pages  */}
         <NavLink to="/"><i><HiHome /></i>Home</NavLink>
-        <NavLink to="/closet"><TbHanger />Closet</NavLink>
-        <NavLink to="/topics"><VscBook />Topics</NavLink>
+        <NavLink to="/closet"><i><TbHanger /></i>Closet</NavLink>
+        <NavLink to="/topics"><i><VscBook /></i>Topics</NavLink>
         
         <NavLink to="/gallery">Gallery</NavLink>
         <NavLink to="/order">Order</NavLink>

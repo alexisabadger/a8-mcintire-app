@@ -6,19 +6,19 @@ but not for an assignment.
 /* Center the body in the middle of the viewport 
 by defining min and max widths with auto right/left margins
 */
-body {
+/* body {
 margin:0 auto;
 width:500px;
 border:1px solid gray;
 padding:4%;
-}
+} */
 
 /* PAGE LAYOUT 
 Consistant design for each page layout block. 
 */
-header, main, article, footer {
+/* header, main, article, footer {
     border-bottom:2px solid gray;
-}
+} */
 
 /* NAVIGATION
 Simple changes to make anchors look like buttons. 
@@ -82,7 +82,7 @@ body {       /* Can alternatively define in html {}. */
   background-position: center center;
   color: var(--main-dark-shade-off-black); /* default font color */
   font-family: 'Poppins', sans-serif;
-  margin: 0 auto 8rem auto ;
+  margin: 0 auto auto auto ;
   padding: 0;
   width: 100vw;
   max-width: 100%;
@@ -202,6 +202,11 @@ nav a {
 }
 
 nav a:hover {}
+
+/*  -----  Icons  ----- */
+i {
+    margin-right: 5px;
+}
 
 /*  -----  Typography  ----- */
 p {}
@@ -425,11 +430,11 @@ object {}
   justify-content: center;
 }
 
-.gallery figure {
+/* .gallery figure {
   width: 300px;
   margin: .75%;
   padding: 0;
-}
+} */
 
 .gallery figcaption {
   display: block;
